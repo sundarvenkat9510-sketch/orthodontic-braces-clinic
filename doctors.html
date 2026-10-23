@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Orthodontists | AuraSmile Clinic</title>
+  <meta name="description" content="Meet our board-certified orthodontists and clinical team specializing in braces, clear aligners, and bite correction.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-clinic sticky-top">
+    <div class="container-fluid px-3 px-md-4 px-xl-5" style="max-width: 1440px;">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-emoji-smile-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Aura<span>Smile</span></span>
+          <span class="brand-tagline">Orthodontics & Braces</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNavbar" aria-controls="clinicNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="clinicNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link active" href="doctors.html">Our Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div id="navAuthContainer" class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-sm btn-white">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Patient Login
+          </a>
+          <a href="register.html" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-person-plus me-1"></i> Sign Up
+          </a>
+          <button class="btn btn-sm btn-primary" onclick="openGlobalBookingModal()">
+            <i class="bi bi-calendar-plus me-1"></i> Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container py-3 text-center">
+      <span class="section-tag"><i class="bi bi-award-fill me-1"></i> Clinical Faculty</span>
+      <h1 class="display-5 fw-bold text-dark mb-3">Meet Our Orthodontic Specialists</h1>
+      <p class="section-subtitle">
+        Our team of board-certified orthodontists pairs decades of university faculty and clinical experience with warm, patient-first compassion.
+      </p>
+      <div class="badge bg-warning-subtle text-dark border px-3 py-2 mt-2">
+        <i class="bi bi-info-circle me-1"></i> <strong>Demo Notice:</strong> Doctor profiles and credentials shown on this site represent realistic sample demonstration content.
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section class="py-5" style="background-color: var(--bg-light);">
+    <div class="container py-4">
+      <div class="row g-4" id="doctorsGridContainer">
+        <!-- Rendered dynamically by script from LocalStorage -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinical Philosophy Section -->
+  <section class="py-5 bg-white border-top">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-tag"><i class="bi bi-heart-pulse-fill me-1"></i> Our Patient Promise</span>
+          <h2 class="section-title">A Doctor-Led, Patient-Centered Philosophy</h2>
+          <p class="text-muted">
+            At AuraSmile, we believe that orthodontics is both a fine art and a rigorous science. Unlike direct-to-consumer mail-order aligners, your smile journey is supervised at every single step by licensed orthodontic specialists.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <i class="bi bi-person-check-fill text-primary fs-4 mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">One-on-One Orthodontist Care</h6>
+                <p class="small text-muted mb-0">You consult with the same lead orthodontist at each adjustment visit.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <i class="bi bi-shield-check text-success fs-4 mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">Conservative Treatment</h6>
+                <p class="small text-muted mb-0">We prioritize non-extraction and airway-friendly mechanics whenever feasible.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <i class="bi bi-clock-history text-secondary fs-4 mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">On-Time Appointments</h6>
+                <p class="small text-muted mb-0">We respect your schedule with low waiting room times and swift tray check-ins.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <i class="bi bi-wallet2 text-info fs-4 mb-2 d-block"></i>
+                <h6 class="fw-bold text-dark">Zero Surprise Charges</h6>
+                <p class="small text-muted mb-0">All retainers, broken bracket repairs, and initial scans are clearly itemized upfront.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80" alt="Orthodontic clinical team consultation" class="img-fluid rounded-4 shadow-lg border border-4 border-white">
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-white rounded-3 shadow-sm border" style="max-width: 280px;">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-patch-check-fill text-primary fs-3"></i>
+                <div>
+                  <strong class="d-block text-dark small fw-bold">Board-Certified Excellence</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">American Board of Orthodontics (ABO) Standard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="clinic-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="d-inline-block text-decoration-none" title="Return to AuraSmile Home">
+              <div class="brand-icon mb-3">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <span class="brand-name fs-4">Aura<span>Smile</span></span>
+            </a>
+            <p class="footer-desc">
+              Premier orthodontic and braces clinic dedicated to transforming smiles and improving dentofacial harmony with compassionate care and digital accuracy.
+            </p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Facebook Login" title="Facebook Login"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram Login" title="Instagram Login"><i class="bi bi-instagram"></i></a>
+              <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube Login" title="YouTube Login"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Login" title="LinkedIn Login"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Orthodontic Care</h5>
+          <ul class="footer-links">
+            <li><a href="treatments.html#metal-braces">Traditional Metal Braces</a></li>
+            <li><a href="treatments.html#ceramic-braces">Ceramic / Clear Braces</a></li>
+            <li><a href="treatments.html#clear-aligners">Custom Clear Aligners</a></li>
+            <li><a href="treatments.html#lingual-braces">Lingual (Hidden) Braces</a></li>
+            <li><a href="treatments.html#retainers-care">Retainers & Retention</a></li>
+            <li><a href="treatments.html#bite-alignment">Bite Alignment & Overbites</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Clinic Contact</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>742 Evergreen Medical Plaza, Suite 400, Metro City, ST 90210</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>+1 (555) 382-SMILE / +1 (555) 382-7645</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>hello@aurasmileclinic.demo</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>Mon - Fri: 8am - 6pm | Sat: 9am - 3pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>© 2026 AuraSmile Orthodontic & Braces Clinic. All rights reserved.</div>
+        <div class="footer-disclaimer-note text-md-end mt-2 mt-md-0">
+          <strong>Demo Notice:</strong> This website is a frontend demonstration created with HTML5, CSS3, JS & Bootstrap 5.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('doctorsGridContainer');
+      if (!container) return;
+      const doctors = JSON.parse(localStorage.getItem(STORAGE_KEYS.DOCTORS) || '[]');
+
+      container.innerHTML = doctors.map(doc => `
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrap">
+              <img src="${doc.image}" alt="${doc.name}">
+              <span class="doctor-exp-badge">${doc.experience}</span>
+            </div>
+            <div class="doctor-body">
+              <h4 class="doctor-name fs-5">${doc.name}</h4>
+              <div class="doctor-role">${doc.title}</div>
+              <div class="doctor-qualifications">${doc.qualifications}</div>
+              <p class="small text-muted mb-3">${doc.bio}</p>
+              
+              <div class="doctor-skills">
+                ${(doc.skills || []).map(s => `<span class="badge">${s}</span>`).join('')}
+              </div>
+
+              <div class="doctor-availability">
+                <i class="bi bi-calendar-week text-primary"></i>
+                <span>${doc.days} (${doc.hours})</span>
+              </div>
+
+              <div class="doctor-footer">
+                <button class="btn btn-sm btn-primary w-100" onclick="openGlobalBookingModal('${doc.id}')">
+                  <i class="bi bi-calendar-plus me-1"></i> Book with ${doc.name.split(' ')[1]}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    });
+  </script>
+</body>
+</html>

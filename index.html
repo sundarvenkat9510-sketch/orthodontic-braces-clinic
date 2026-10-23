@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraSmile Orthodontic & Braces Clinic | Your Perfect Smile Starts Here</title>
+  <meta name="description" content="Premier orthodontic and braces clinic offering traditional metal braces, ceramic braces, and custom clear aligners with board-certified orthodontists.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Clinic Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-clinic sticky-top">
+    <div class="container-fluid px-3 px-md-4 px-xl-5" style="max-width: 1440px;">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-emoji-smile-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Aura<span>Smile</span></span>
+          <span class="brand-tagline">Orthodontics & Braces</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNavbar" aria-controls="clinicNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="clinicNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="treatments.html">Treatments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="doctors.html">Our Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div id="navAuthContainer" class="d-flex align-items-center gap-2">
+          <!-- Populated dynamically by main.js (Login or User Dropdown) -->
+          <a href="login.html" class="btn btn-sm btn-white">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Patient Login
+          </a>
+          <a href="register.html" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-person-plus me-1"></i> Sign Up
+          </a>
+          <button class="btn btn-sm btn-primary" onclick="openGlobalBookingModal()">
+            <i class="bi bi-calendar-plus me-1"></i> Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-badge">
+            <i class="bi bi-stars sparkle"></i>
+            <span>Premier Orthodontic Care & 3D Digital Dentistry</span>
+          </div>
+          <h1 class="hero-title">
+            Your Perfect Smile <br>
+            <span class="text-gradient">Starts Here</span>
+          </h1>
+          <p class="hero-lead">
+            Experience personalized orthodontic care designed for adults, teens, and children. From virtually invisible clear aligners to precision ceramic and metal braces, our board-certified orthodontists craft healthy, confident smiles tailored to your unique facial profile.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <button class="btn btn-primary btn-lg" onclick="openGlobalBookingModal()">
+              <i class="bi bi-calendar-check me-2"></i> Book an Appointment
+            </button>
+            <a href="treatments.html" class="btn btn-white btn-lg">
+              <i class="bi bi-search me-2"></i> Explore Treatments
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-4 pt-2">
+            <div class="d-flex align-items-center">
+              <div class="d-flex text-warning fs-5 me-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div>
+                <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem;">4.95 / 5 Rating</strong>
+                <small class="text-muted">Over 1,200+ Verified Patient Reviews</small>
+              </div>
+            </div>
+            <div class="border-start ps-3 d-none d-sm-block">
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1 fw-bold">
+                <i class="bi bi-patch-check-fill me-1"></i> Diamond+ Provider
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80" alt="Orthodontist examining patient smile in modern dental clinic" class="hero-main-img">
+            
+            <!-- Floating Trust Cards -->
+            <div class="hero-floating-card card-top">
+              <div class="floating-icon-box bg-mint-grad">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <div>
+                <strong class="d-block text-dark" style="font-size: 0.9rem;">99.4% Success Rate</strong>
+                <small class="text-muted">Digital 3D Smile Simulation</small>
+              </div>
+            </div>
+
+            <div class="hero-floating-card card-bottom">
+              <div class="floating-icon-box bg-primary-grad">
+                <i class="bi bi-credit-card-2-front"></i>
+              </div>
+              <div>
+                <strong class="d-block text-dark" style="font-size: 0.9rem;">0% Interest Payment Plans</strong>
+                <small class="text-muted">Flexible monthly installments</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Stats Bar -->
+      <div class="hero-trust-bar">
+        <div class="row g-4 align-items-center">
+          <div class="col-6 col-md-3 stat-item border-end">
+            <div class="stat-number">12,500+</div>
+            <p class="stat-label">Smiles Transformed</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item border-end-md">
+            <div class="stat-number">99.4%</div>
+            <p class="stat-label">Patient Satisfaction</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item border-end">
+            <div class="stat-number">16+</div>
+            <p class="stat-label">Years of Clinical Excellence</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <div class="stat-number">4</div>
+            <p class="stat-label">Board-Certified Specialists</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smile Transformations / Before-and-After Gallery -->
+  <section class="py-5" style="background-color: #f1f5f9;">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-magic me-1"></i> Real Patient Results</span>
+        <h2 class="section-title">Smile Transformation Gallery</h2>
+        <p class="section-subtitle">
+          Explore real results achieved through our personalized orthodontic treatment plans. Every smile tells a story of newfound confidence.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Transformation Card 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="before-after-card h-100">
+            <div class="ba-image-container">
+              <div class="ba-split">
+                <div class="ba-side">
+                  <span class="ba-tag before">Before</span>
+                  <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=500&q=80" alt="Severe anterior crowding before orthodontic treatment">
+                </div>
+                <div class="ba-divider-line"></div>
+                <div class="ba-side">
+                  <span class="ba-tag after">After</span>
+                  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=80" alt="Beautifully aligned teeth after clear aligner treatment">
+                </div>
+              </div>
+            </div>
+            <div class="ba-info">
+              <span class="badge bg-light text-primary border mb-1">Clear Aligners</span>
+              <h5 class="ba-case-title">Severe Crowding & Overlap</h5>
+              <p class="ba-meta mb-0"><i class="bi bi-clock me-1 text-primary"></i> 14 Months • Dr. Marcus Vance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transformation Card 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="before-after-card h-100">
+            <div class="ba-image-container">
+              <div class="ba-split">
+                <div class="ba-side">
+                  <span class="ba-tag before">Before</span>
+                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80" alt="Deep bite and narrow arch before braces">
+                </div>
+                <div class="ba-divider-line"></div>
+                <div class="ba-side">
+                  <span class="ba-tag after">After</span>
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Broad symmetric smile after ceramic braces">
+                </div>
+              </div>
+            </div>
+            <div class="ba-info">
+              <span class="badge bg-light text-primary border mb-1">Ceramic Braces</span>
+              <h5 class="ba-case-title">Deep Bite & Arch Expansion</h5>
+              <p class="ba-meta mb-0"><i class="bi bi-clock me-1 text-primary"></i> 16 Months • Dr. Sarah Jenkins</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transformation Card 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="before-after-card h-100">
+            <div class="ba-image-container">
+              <div class="ba-split">
+                <div class="ba-side">
+                  <span class="ba-tag before">Before</span>
+                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=80" alt="Midline diastema gap before braces">
+                </div>
+                <div class="ba-divider-line"></div>
+                <div class="ba-side">
+                  <span class="ba-tag after">After</span>
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Closed midline gap with permanent smile stability">
+                </div>
+              </div>
+            </div>
+            <div class="ba-info">
+              <span class="badge bg-light text-primary border mb-1">Traditional Braces</span>
+              <h5 class="ba-case-title">Diastema Gap Closure</h5>
+              <p class="ba-meta mb-0"><i class="bi bi-clock me-1 text-primary"></i> 10 Months • Dr. David Chen</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transformation Card 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="before-after-card h-100">
+            <div class="ba-image-container">
+              <div class="ba-split">
+                <div class="ba-side">
+                  <span class="ba-tag before">Before</span>
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Anterior open bite before treatment">
+                </div>
+                <div class="ba-divider-line"></div>
+                <div class="ba-side">
+                  <span class="ba-tag after">After</span>
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Restored vertical bite and chewing function">
+                </div>
+              </div>
+            </div>
+            <div class="ba-info">
+              <span class="badge bg-light text-primary border mb-1">Bite Alignment</span>
+              <h5 class="ba-case-title">Open Bite & Chewing Restored</h5>
+              <p class="ba-meta mb-0"><i class="bi bi-clock me-1 text-primary"></i> 18 Months • Dr. Elena Rostova</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="treatments.html" class="btn btn-outline-primary">
+          View All Treatment Options & Comparisons <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Treatments Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-grid-fill me-1"></i> Specialized Orthodontics</span>
+        <h2 class="section-title">Comprehensive Orthodontic Treatments</h2>
+        <p class="section-subtitle">
+          We combine modern biomechanics with aesthetic options so you can choose the orthodontic path that best fits your goals, routine, and budget.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Treatment 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card">
+            <div class="treatment-img-wrap">
+              <span class="badge bg-primary treatment-badge">Most Dependable</span>
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Traditional metal braces on teeth">
+            </div>
+            <div class="treatment-body">
+              <h4 class="treatment-title">Traditional Metal Braces</h4>
+              <p class="treatment-desc">
+                Proven stainless-steel brackets and high-elasticity archwires engineered for maximum precision, strength, and predictable movement for complex cases.
+              </p>
+              <ul class="treatment-features">
+                <li><i class="bi bi-check-circle-fill"></i> Unmatched control for severe rotations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Fun colored bands for kids & teens</li>
+                <li><i class="bi bi-check-circle-fill"></i> Most economical orthodontic solution</li>
+              </ul>
+              <div class="treatment-footer">
+                <a href="treatments.html#metal-braces" class="btn btn-outline-primary btn-sm flex-grow-1">Learn More</a>
+                <button class="btn btn-primary btn-sm flex-grow-1" onclick="openGlobalBookingModal('', 'Traditional Metal Braces')">Book Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card">
+            <div class="treatment-img-wrap">
+              <span class="badge bg-info text-dark treatment-badge">Tooth-Colored</span>
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Ceramic clear braces on adult patient">
+            </div>
+            <div class="treatment-body">
+              <h4 class="treatment-title">Ceramic / Clear Braces</h4>
+              <p class="treatment-desc">
+                High-density monocrystalline ceramic brackets that blend naturally with tooth enamel. Enjoy full mechanical strength with subtle, discreet aesthetics.
+              </p>
+              <ul class="treatment-features">
+                <li><i class="bi bi-check-circle-fill"></i> Translucent stain-resistant brackets</li>
+                <li><i class="bi bi-check-circle-fill"></i> Smooth rounded edges reduce mouth irritation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Preferred by adult professionals</li>
+              </ul>
+              <div class="treatment-footer">
+                <a href="treatments.html#ceramic-braces" class="btn btn-outline-primary btn-sm flex-grow-1">Learn More</a>
+                <button class="btn btn-primary btn-sm flex-grow-1" onclick="openGlobalBookingModal('', 'Ceramic Braces')">Book Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card">
+            <div class="treatment-img-wrap">
+              <span class="badge bg-success treatment-badge">Top Popularity</span>
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Custom clear aligner held by smiling patient">
+            </div>
+            <div class="treatment-body">
+              <h4 class="treatment-title">Custom Clear Aligners</h4>
+              <p class="treatment-desc">
+                Removable, virtually invisible BPA-free aligner trays custom-crafted from 3D intraoral scans. Straighten your teeth without wires, brackets, or diet limits.
+              </p>
+              <ul class="treatment-features">
+                <li><i class="bi bi-check-circle-fill"></i> 100% Removable for eating & brushing</li>
+                <li><i class="bi bi-check-circle-fill"></i> Painless 3D digital simulation preview</li>
+                <li><i class="bi bi-check-circle-fill"></i> Fewer in-office adjustment visits</li>
+              </ul>
+              <div class="treatment-footer">
+                <a href="treatments.html#clear-aligners" class="btn btn-outline-primary btn-sm flex-grow-1">Learn More</a>
+                <button class="btn btn-primary btn-sm flex-grow-1" onclick="openGlobalBookingModal('', 'Clear Aligners')">Book Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Our Clinic -->
+  <section class="py-5" style="background-color: var(--bg-soft-blue);">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="section-tag"><i class="bi bi-shield-check me-1"></i> The AuraSmile Difference</span>
+          <h2 class="section-title">Why Patients Choose AuraSmile Orthodontics</h2>
+          <p class="text-muted">
+            Orthodontic care is an investment in your lifelong oral health and personal confidence. We combine hospital-grade hygiene, digital scanning, and gentle orthodontics in a calm, modern setting.
+          </p>
+          <div class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex gap-3">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div>
+                <strong class="text-dark">Board-Certified Orthodontists Only</strong>
+                <p class="small text-muted mb-0">Every treatment plan is designed and supervised directly by specialized orthodontists, not general dental algorithms.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div>
+                <strong class="text-dark">No Gooey Impressions (100% 3D Scans)</strong>
+                <p class="small text-muted mb-0">Our iTero 5D scanners map your entire mouth in under 3 minutes with micron accuracy and zero gag reflex.</p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 36px; height: 36px;">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <div>
+                <strong class="text-dark">Transparent 0% Interest Financing</strong>
+                <p class="small text-muted mb-0">No hidden retainers or adjustment fees. Flexible monthly installment plans managed conveniently through our patient portal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-wrap sky">
+                  <i class="bi bi-cpu"></i>
+                </div>
+                <h5 class="fw-bold text-dark">AI-Assisted Staging</h5>
+                <p class="small text-muted mb-0">Advanced dental biomechanics software calculates optimal tooth movement sequences to reduce soreness.</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-wrap teal">
+                  <i class="bi bi-speedometer"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Accelerated Treatment</h5>
+                <p class="small text-muted mb-0">Low-friction self-ligating brackets and photobiomodulation options can reduce treatment timeline by up to 30%.</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-wrap mint">
+                  <i class="bi bi-shield-shaded"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Lifetime Retainer Warranty</h5>
+                <p class="small text-muted mb-0">Digital 3D file cloud storage ensures fast, precision replacement retainers whenever you need them.</p>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon-wrap navy">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <h5 class="fw-bold text-dark">Gentle Pain Management</h5>
+                <p class="small text-muted mb-0">Super-elastic nickel-titanium thermal wires activate via body heat, delivering continuous gentle force.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Lead Orthodontists Teaser -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+        <div>
+          <span class="section-tag"><i class="bi bi-person-badge-fill me-1"></i> Medical Excellence</span>
+          <h2 class="section-title mb-0">Meet Our Orthodontists</h2>
+        </div>
+        <a href="doctors.html" class="btn btn-outline-primary mt-3 mt-md-0">
+          View All Doctors & Credentials <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Doctor 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=80" alt="Dr. Sarah Jenkins, Chief Orthodontist">
+              <span class="doctor-exp-badge">16+ Yrs Exp</span>
+            </div>
+            <div class="doctor-body">
+              <h5 class="doctor-name">Dr. Sarah Jenkins</h5>
+              <div class="doctor-role">Chief Orthodontist & Director</div>
+              <div class="doctor-qualifications">DDS, MS, ABO Board Certified</div>
+              <p class="small text-muted mb-3">Specialist in complex adult malocclusions, surgical orthodontics, and smile aesthetics.</p>
+              <div class="doctor-footer">
+                <button class="btn btn-sm btn-primary w-100" onclick="openGlobalBookingModal('doc-1')">
+                  <i class="bi bi-calendar2-check me-1"></i> Book with Dr. Jenkins
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=80" alt="Dr. Marcus Vance, Clear Aligner Specialist">
+              <span class="doctor-exp-badge">12+ Yrs Exp</span>
+            </div>
+            <div class="doctor-body">
+              <h5 class="doctor-name">Dr. Marcus Vance</h5>
+              <div class="doctor-role">Senior Aligner Specialist</div>
+              <div class="doctor-qualifications">DMD, MS, Diamond+ Invisalign</div>
+              <p class="small text-muted mb-3">Pioneering 3D digital smile workflows for invisible aligners and discreet adolescent care.</p>
+              <div class="doctor-footer">
+                <button class="btn btn-sm btn-primary w-100" onclick="openGlobalBookingModal('doc-2')">
+                  <i class="bi bi-calendar2-check me-1"></i> Book with Dr. Vance
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1594824813637-b2f76856a297?auto=format&fit=crop&w=700&q=80" alt="Dr. Elena Rostova, Pediatric Orthodontist">
+              <span class="doctor-exp-badge">10+ Yrs Exp</span>
+            </div>
+            <div class="doctor-body">
+              <h5 class="doctor-name">Dr. Elena Rostova</h5>
+              <div class="doctor-role">Pediatric Orthodontist</div>
+              <div class="doctor-qualifications">DDS, Ph.D., Member AAO</div>
+              <p class="small text-muted mb-3">Focused on early interceptive Phase 1 guidance, palatal expansion, and airway health.</p>
+              <div class="doctor-footer">
+                <button class="btn btn-sm btn-primary w-100" onclick="openGlobalBookingModal('doc-3')">
+                  <i class="bi bi-calendar2-check me-1"></i> Book with Dr. Elena
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrap">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=80" alt="Dr. David Chen, Ceramic & Lingual Specialist">
+              <span class="doctor-exp-badge">8+ Yrs Exp</span>
+            </div>
+            <div class="doctor-body">
+              <h5 class="doctor-name">Dr. David Chen</h5>
+              <div class="doctor-role">Aesthetic & Ceramic Specialist</div>
+              <div class="doctor-qualifications">DMD, Cert. in Orthodontics</div>
+              <p class="small text-muted mb-3">Mastery in cosmetic bracket bonding, accelerated mechanics, and hidden lingual systems.</p>
+              <div class="doctor-footer">
+                <button class="btn btn-sm btn-primary w-100" onclick="openGlobalBookingModal('doc-4')">
+                  <i class="bi bi-calendar2-check me-1"></i> Book with Dr. Chen
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Testimonials -->
+  <section class="py-5" style="background-color: #f8fafc;">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-chat-quote-fill me-1"></i> Patient Stories</span>
+        <h2 class="section-title">What Our Patients Say</h2>
+        <p class="section-subtitle">Real experiences from patients who entrusted their smiles to the AuraSmile clinical team.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "As an adult in my 30s, I was anxious about wearing braces. Dr. Vance recommended clear aligners, and within 12 months my crossbite and crowding were completely fixed! The patient portal made installment payments effortless."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Patient Emily C." class="author-avatar">
+              <div>
+                <div class="author-name">Emily Carter</div>
+                <div class="author-case">Clear Aligners • 12 Months</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Dr. Sarah Jenkins and her team are exceptional. My son needed early phase palatal expansion and ceramic braces. The clinic was so gentle, welcoming, and technologically modern. He never dreaded an adjustment visit!"
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Patient Marcus T." class="author-avatar">
+              <div>
+                <div class="author-name">Marcus Thompson</div>
+                <div class="author-case">Parent of Phase 1 Patient</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The digital 3D scan on day one showed me exactly what my finished smile would look like before we even started. Dr. Chen made the ceramic braces virtually invisible. 10/10 clinic experience!"
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Patient Jessica R." class="author-avatar">
+              <div>
+                <div class="author-name">Jessica Ramirez</div>
+                <div class="author-case">Ceramic Braces • 15 Months</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-question-circle-fill me-1"></i> Patient Guidance</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answers to common questions about orthodontic consultations, braces, aligners, and payment options.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion accordion-clinic" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true">
+                  Am I too old to get braces or clear aligners?
+                </button>
+              </h2>
+              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely not! More than 35% of our orthodontic patients are adults. As long as your gums and supporting bone are healthy, teeth can be safely and effectively moved at any age. We offer discreet aesthetic options such as ceramic braces and clear aligners so you can straighten your teeth without feeling self-conscious.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                  How long does orthodontic treatment typically take?
+                </button>
+              </h2>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Treatment duration varies depending on your specific malocclusion, biological response, and appliance compliance. Minor spacing or mild crowding with clear aligners can take as little as 6 to 9 months, while comprehensive bite corrections typically range from 14 to 22 months. During your initial consultation, we provide an exact estimated timeline based on your 3D scan.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                  Do braces or clear aligners hurt?
+                </button>
+              </h2>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Modern orthodontics is far gentler than in the past. You will experience mild tenderness or tightness for 2 to 3 days after getting braces fitted or when switching to a new aligner tray as your teeth begin shifting. This is normal and can be easily managed with over-the-counter pain relievers and orthodontic wax.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                  How much does treatment cost and do you offer payment plans?
+                </button>
+              </h2>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We believe cost should never prevent someone from achieving a healthy smile. We offer transparent all-inclusive fee structures with zero surprise charges. We provide customized 0% interest monthly installment plans, flexible down payments, and assistance with dental insurance benefits. You can track all scheduled payments through our Patient Portal.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive">
+                  Why are retainers necessary after treatment?
+                </button>
+              </h2>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Teeth have a natural physiological memory and tendency to shift back (relapse) as bone remodels around the new positions. Retainers hold your teeth stable during this critical phase and preserve your smile for life. We offer durable clear Essix retainers, traditional Hawley retainers, and bonded lingual retention wires.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="py-5" style="background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);">
+    <div class="container py-4 text-center text-white">
+      <h2 class="fw-bold mb-3 text-white">Ready for Your Free Smile Assessment?</h2>
+      <p class="text-white-50 mx-auto mb-4" style="max-width: 620px; font-size: 1.1rem;">
+        Take the first step toward a radiant, healthy smile. Schedule an in-depth clinical consultation with our board-certified orthodontists today.
+      </p>
+      <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-white btn-lg" onclick="openGlobalBookingModal()">
+          <i class="bi bi-calendar2-check me-2 text-primary"></i> Book My Appointment
+        </button>
+        <a href="tel:+15553827645" class="btn btn-outline-light btn-lg">
+          <i class="bi bi-telephone-fill me-2"></i> +1 (555) 382-SMILE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="clinic-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="d-inline-block text-decoration-none" title="Return to AuraSmile Home">
+              <div class="brand-icon mb-3">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <span class="brand-name fs-4">Aura<span>Smile</span></span>
+            </a>
+            <p class="footer-desc">
+              Premier orthodontic and braces clinic dedicated to transforming smiles and improving dentofacial harmony with compassionate care and digital accuracy.
+            </p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Facebook Login" title="Facebook Login"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram Login" title="Instagram Login"><i class="bi bi-instagram"></i></a>
+              <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube Login" title="YouTube Login"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Login" title="LinkedIn Login"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Orthodontic Care</h5>
+          <ul class="footer-links">
+            <li><a href="treatments.html#metal-braces">Traditional Metal Braces</a></li>
+            <li><a href="treatments.html#ceramic-braces">Ceramic / Clear Braces</a></li>
+            <li><a href="treatments.html#clear-aligners">Custom Clear Aligners</a></li>
+            <li><a href="treatments.html#lingual-braces">Lingual (Hidden) Braces</a></li>
+            <li><a href="treatments.html#retainers-care">Retainers & Retention</a></li>
+            <li><a href="treatments.html#bite-alignment">Bite Alignment & Overbites</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Clinic Contact</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>742 Evergreen Medical Plaza, Suite 400, Metro City, ST 90210</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>+1 (555) 382-SMILE / +1 (555) 382-7645</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>hello@aurasmileclinic.demo</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>Mon - Fri: 8am - 6pm | Sat: 9am - 3pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+          © 2026 AuraSmile Orthodontic & Braces Clinic. All rights reserved.
+        </div>
+        <div class="footer-disclaimer-note text-md-end mt-2 mt-md-0">
+          <strong>Demo Notice:</strong> This website is a frontend simulation created with HTML5, CSS3, JS & Bootstrap 5. Sample content and simulated LocalStorage data are for demonstration purposes only.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core Clinic Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+</body>
+</html>

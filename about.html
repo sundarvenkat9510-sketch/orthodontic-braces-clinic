@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | AuraSmile Orthodontic & Braces Clinic</title>
+  <meta name="description" content="Learn about AuraSmile Orthodontic Clinic, our mission, advanced 3D digital technology, hospital-grade hygiene standards, and patient-centered philosophy.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-clinic sticky-top">
+    <div class="container-fluid px-3 px-md-4 px-xl-5" style="max-width: 1440px;">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-emoji-smile-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Aura<span>Smile</span></span>
+          <span class="brand-tagline">Orthodontics & Braces</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNavbar" aria-controls="clinicNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="clinicNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Our Doctors</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div id="navAuthContainer" class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-sm btn-white">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Patient Login
+          </a>
+          <a href="register.html" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-person-plus me-1"></i> Sign Up
+          </a>
+          <button class="btn btn-sm btn-primary" onclick="openGlobalBookingModal()">
+            <i class="bi bi-calendar-plus me-1"></i> Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container py-3 text-center">
+      <span class="section-tag"><i class="bi bi-building-fill me-1"></i> Welcome to AuraSmile</span>
+      <h1 class="display-5 fw-bold text-dark mb-3">About Our Clinic & Heritage</h1>
+      <p class="section-subtitle">
+        Founded with a passion for transforming smiles and restoring confident chewing function through personalized, gentle orthodontic care and modern 3D dentistry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Clinic Intro & Mission -->
+  <section class="py-5" style="background-color: var(--bg-light);">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Modern orthodontic reception and clinic interior" class="img-fluid rounded-4 shadow-lg border border-4 border-white">
+            <div class="position-absolute bottom-0 end-0 m-3 p-3 bg-white rounded-3 shadow-md border" style="max-width: 260px;">
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-circle bg-primary-subtle text-primary p-2 fs-3">
+                  <i class="bi bi-calendar2-check"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-0">16+ Years</h6>
+                  <small class="text-muted">Serving Metro City families</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <span class="section-tag"><i class="bi bi-bullseye me-1"></i> Mission & Vision</span>
+          <h2 class="section-title">Crafting Confident Smiles with Clinical Precision</h2>
+          <p class="text-muted">
+            At AuraSmile Orthodontic Clinic, we believe every patient deserves a smile that radiates confidence and promotes lasting oral health. Established in 2010 by Dr. Sarah Jenkins, our clinic was conceived as an antidote to cold, clinical, high-stress dental offices.
+          </p>
+          <p class="text-muted">
+            We have designed our entire space—from ambient acoustic soundproofing and warm lighting to high-resolution digital touchscreens—to feel inviting, calm, and reassuring for adults, teenagers, and young children alike.
+          </p>
+
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 shadow-sm border h-100">
+                <h6 class="fw-bold text-dark"><i class="bi bi-eye-fill text-primary me-2"></i>Our Vision</h6>
+                <p class="small text-muted mb-0">To be the benchmark in digital orthodontic care, where technological innovation and warm empathy intersect seamlessly.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-white rounded-3 shadow-sm border h-100">
+                <h6 class="fw-bold text-dark"><i class="bi bi-gem text-teal me-2"></i>Our Mission</h6>
+                <p class="small text-muted mb-0">To deliver pain-minimized, customized teeth alignment and bite corrections with transparent, accessible financial installments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient-Centered Treatment Journey -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-bezier2 me-1"></i> The AuraSmile Journey</span>
+        <h2 class="section-title">Your 4-Step Patient Pathway</h2>
+        <p class="section-subtitle">
+          From your initial consultation to the day you reveal your transformed smile, our process is clear, transparent, and collaborative.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap sky mx-auto">
+              <span class="fw-bold fs-4">01</span>
+            </div>
+            <h5 class="fw-bold text-dark">Comprehensive 3D Scan</h5>
+            <p class="small text-muted mb-0">We take high-definition 3D intraoral impressions and low-dose digital x-rays with zero gagging or putty.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap teal mx-auto">
+              <span class="fw-bold fs-4">02</span>
+            </div>
+            <h5 class="fw-bold text-dark">Customized Plan & 3D Preview</h5>
+            <p class="small text-muted mb-0">Your orthodontist designs a computer-simulated model showing exactly how each tooth shifts over time.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap mint mx-auto">
+              <span class="fw-bold fs-4">03</span>
+            </div>
+            <h5 class="fw-bold text-dark">Gentle Treatment Delivery</h5>
+            <p class="small text-muted mb-0">Whether you choose clear aligners or ceramic braces, appointments are gentle, punctual, and easy.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap navy mx-auto">
+              <span class="fw-bold fs-4">04</span>
+            </div>
+            <h5 class="fw-bold text-dark">Lifetime Retainer Care</h5>
+            <p class="small text-muted mb-0">Custom retainers and annual checkups ensure your new aligned bite stays permanent for decades to come.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Dental Technology Showcase -->
+  <section class="py-5" style="background-color: var(--bg-soft-blue);">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-tag"><i class="bi bi-cpu-fill me-1"></i> State-of-the-Art Equipment</span>
+        <h2 class="section-title">Modern Dental & Orthodontic Technology</h2>
+        <p class="section-subtitle">
+          Investing in cutting-edge diagnostic and therapeutic technology ensures faster treatment times, heightened safety, and superior clinical precision.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Tech 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm bg-white">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="3D Intraoral digital scanner" style="height: 180px; object-fit: cover;">
+            <div class="card-body p-3">
+              <h5 class="fw-bold fs-6 text-dark mb-1">iTero Element 5D Scanner</h5>
+              <p class="small text-muted mb-0">Captures 6,000 frames per second to render an ultra-precise 3D digital model of your teeth in under 3 minutes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm bg-white">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Digital low-radiation CBCT panoramic x-ray" style="height: 180px; object-fit: cover;">
+            <div class="card-body p-3">
+              <h5 class="fw-bold fs-6 text-dark mb-1">Ultra-Low-Dose CBCT Imaging</h5>
+              <p class="small text-muted mb-0">Green-technology cone beam CT and cephalometric imaging delivering up to 80% lower radiation than older film x-rays.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm bg-white">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="AI-powered orthodontic simulation software" style="height: 180px; object-fit: cover;">
+            <div class="card-body p-3">
+              <h5 class="fw-bold fs-6 text-dark mb-1">ClinCheck AI Simulation</h5>
+              <p class="small text-muted mb-0">Algorithmic tooth staging calculates optimal velocity, rotation angles, and staging for tooth roots and crowns.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm bg-white">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Ultrasonic autoclave sterilization suite" style="height: 180px; object-fit: cover;">
+            <div class="card-body p-3">
+              <h5 class="fw-bold fs-6 text-dark mb-1">Class-B Vacuum Sterilization</h5>
+              <p class="small text-muted mb-0">Hospital-grade steam autoclaves with biological spore testing and sealed packaging for every instrument.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinic Facilities & Hygiene Standards -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-tag"><i class="bi bi-shield-check me-1"></i> Patient Safety</span>
+          <h2 class="section-title">Rigorous Hygiene & Facility Standards</h2>
+          <p class="text-muted">
+            Your safety and well-being are paramount. Our clinic strictly adheres to and exceeds the hygiene standards mandated by the CDC and OSHA for outpatient surgical and dental care.
+          </p>
+          <div class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-mint text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background-color: var(--accent-mint);">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <span class="text-dark fw-semibold">Medical-grade HEPA 14 air purifiers exchanging operatory air every 6 minutes</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-mint text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background-color: var(--accent-mint);">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <span class="text-dark fw-semibold">Private acoustic consultation and treatment suites for discreet care</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-mint text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background-color: var(--accent-mint);">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <span class="text-dark fw-semibold">Distilled and purified closed-loop dental unit waterline systems</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-mint text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background-color: var(--accent-mint);">
+                <i class="bi bi-check-lg"></i>
+              </div>
+              <span class="text-dark fw-semibold">Daily chemical and weekly biological monitoring of all autoclave cycles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="rounded-4 overflow-hidden shadow-lg border border-4 border-white">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80" alt="Clean sanitized dental suite" class="w-100 h-100 object-fit-cover" style="height: 380px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="clinic-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="d-inline-block text-decoration-none" title="Return to AuraSmile Home">
+              <div class="brand-icon mb-3">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <span class="brand-name fs-4">Aura<span>Smile</span></span>
+            </a>
+            <p class="footer-desc">
+              Premier orthodontic and braces clinic dedicated to transforming smiles and improving dentofacial harmony with compassionate care and digital accuracy.
+            </p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Facebook Login" title="Facebook Login"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram Login" title="Instagram Login"><i class="bi bi-instagram"></i></a>
+              <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube Login" title="YouTube Login"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Login" title="LinkedIn Login"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Orthodontic Care</h5>
+          <ul class="footer-links">
+            <li><a href="treatments.html#metal-braces">Traditional Metal Braces</a></li>
+            <li><a href="treatments.html#ceramic-braces">Ceramic / Clear Braces</a></li>
+            <li><a href="treatments.html#clear-aligners">Custom Clear Aligners</a></li>
+            <li><a href="treatments.html#lingual-braces">Lingual (Hidden) Braces</a></li>
+            <li><a href="treatments.html#retainers-care">Retainers & Retention</a></li>
+            <li><a href="treatments.html#bite-alignment">Bite Alignment & Overbites</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Clinic Contact</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>742 Evergreen Medical Plaza, Suite 400, Metro City, ST 90210</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>+1 (555) 382-SMILE / +1 (555) 382-7645</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>hello@aurasmileclinic.demo</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>Mon - Fri: 8am - 6pm | Sat: 9am - 3pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>© 2026 AuraSmile Orthodontic & Braces Clinic. All rights reserved.</div>
+        <div class="footer-disclaimer-note text-md-end mt-2 mt-md-0">
+          <strong>Demo Notice:</strong> This website is a frontend demonstration created with HTML5, CSS3, JS & Bootstrap 5.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+</body>
+</html>

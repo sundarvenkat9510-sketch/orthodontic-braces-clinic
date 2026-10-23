@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | AuraSmile Orthodontic Clinic</title>
+  <meta name="description" content="Contact AuraSmile Orthodontic Clinic for appointments, inquiries, and clinic location details in Metro City.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-clinic sticky-top">
+    <div class="container-fluid px-3 px-md-4 px-xl-5" style="max-width: 1440px;">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon">
+          <i class="bi bi-emoji-smile-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Aura<span>Smile</span></span>
+          <span class="brand-tagline">Orthodontics & Braces</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#clinicNavbar" aria-controls="clinicNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="clinicNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Our Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div id="navAuthContainer" class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-sm btn-white">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Patient Login
+          </a>
+          <a href="register.html" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-person-plus me-1"></i> Sign Up
+          </a>
+          <button class="btn btn-sm btn-primary" onclick="openGlobalBookingModal()">
+            <i class="bi bi-calendar-plus me-1"></i> Book Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container py-3 text-center">
+      <span class="section-tag"><i class="bi bi-telephone-inbound-fill me-1"></i> Get in Touch</span>
+      <h1 class="display-5 fw-bold text-dark mb-3">Contact AuraSmile Orthodontics</h1>
+      <p class="section-subtitle">
+        Have questions about braces, clear aligners, or financing options? We're here to help you every step of the way.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Cards & Form Section -->
+  <section class="py-5" style="background-color: var(--bg-light);">
+    <div class="container py-4">
+      
+      <!-- Top Quick Info Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border rounded-4 shadow-sm bg-white text-center">
+            <div class="rounded-circle bg-primary-subtle text-primary mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Clinic Location</h5>
+            <p class="text-muted small mb-0">
+              742 Evergreen Medical Plaza<br>
+              Suite 400 (4th Floor), Metro City, ST 90210<br>
+              <span class="text-primary fw-semibold"><i class="bi bi-p-square me-1"></i>Free Patient Parking Validated</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border rounded-4 shadow-sm bg-white text-center">
+            <div class="rounded-circle bg-success-subtle text-success mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Phone & Emergency</h5>
+            <p class="text-muted small mb-0">
+              Direct Line: <strong>+1 (555) 382-SMILE</strong><br>
+              Reception: +1 (555) 382-7645<br>
+              <span class="text-danger fw-semibold"><i class="bi bi-heart-pulse me-1"></i>24/7 On-Call Wire & Bracket Care</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border rounded-4 shadow-sm bg-white text-center">
+            <div class="rounded-circle bg-info-subtle text-info-emphasis mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Clinical Hours</h5>
+            <p class="text-muted small mb-0">
+              Monday – Friday: 8:00 AM – 6:00 PM<br>
+              Saturday: 9:00 AM – 3:00 PM<br>
+              <span class="text-secondary fw-semibold">Sunday: Closed (Emergency by Appt)</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Form & Map Grid -->
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="card p-4 p-md-5 border rounded-4 shadow-sm bg-white">
+            <h3 class="fw-bold text-dark mb-2">Send an Enquiry or Message</h3>
+            <p class="text-muted small mb-4">
+              Fill in your details below and our patient care team will get back to you within 2 business hours.
+            </p>
+
+            <form id="contactForm" onsubmit="handleContactFormSubmit(event)">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Your Name *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="e.g. Jessica Taylor" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="jessica@example.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Subject / Topic *</label>
+                  <select id="contactSubject" class="form-select" required>
+                    <option value="New Patient Consultation">New Patient Consultation</option>
+                    <option value="Clear Aligners Inquiry">Clear Aligners Inquiry</option>
+                    <option value="Braces & Pricing">Braces & Pricing / 0% Financing</option>
+                    <option value="Appointment Reschedule">Appointment Reschedule</option>
+                    <option value="Other Inquiries">Other Inquiries</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message or Question *</label>
+                  <textarea id="contactMessage" class="form-control" rows="4" placeholder="How can we assist you with your smile goals?..." required></textarea>
+                </div>
+              </div>
+
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="contactConsent" required checked>
+                <label class="form-check-label text-muted small" for="contactConsent">
+                  I agree to receive clinic updates and SMS appointment confirmations (Demo disclaimer).
+                </label>
+              </div>
+
+              <div class="mt-4">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                  <i class="bi bi-send-fill me-2"></i> Submit Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Location & Interactive Map Card -->
+        <div class="col-lg-5">
+          <div class="card p-4 border rounded-4 shadow-sm bg-white h-100 d-flex flex-column">
+            <h4 class="fw-bold text-dark mb-3"><i class="bi bi-map-fill text-primary me-2"></i>Interactive Clinic Map</h4>
+            
+            <!-- Styled Visual Map Placeholder -->
+            <div class="rounded-4 overflow-hidden position-relative border mb-3 flex-grow-1" style="min-height: 280px; background: #e2e8f0;">
+              <!-- Visual Mock Map Graphic -->
+              <svg width="100%" height="100%" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                <rect width="500" height="320" fill="#f1f5f9"/>
+                <!-- Grid Roads -->
+                <line x1="0" y1="90" x2="500" y2="90" stroke="#cbd5e1" stroke-width="18"/>
+                <line x1="0" y1="220" x2="500" y2="220" stroke="#cbd5e1" stroke-width="24"/>
+                <line x1="160" y1="0" x2="160" y2="320" stroke="#cbd5e1" stroke-width="20"/>
+                <line x1="340" y1="0" x2="340" y2="320" stroke="#cbd5e1" stroke-width="16"/>
+                <!-- Park Green Area -->
+                <rect x="20" y="110" width="120" height="90" rx="12" fill="#d1fae5"/>
+                <text x="45" y="155" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#065f46">Evergreen Park</text>
+                <!-- Medical Plaza Building -->
+                <rect x="180" y="110" width="140" height="90" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+                <text x="195" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Evergreen Plaza</text>
+                <text x="205" y="165" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#0284c7">AuraSmile #400</text>
+                <!-- Pin -->
+                <circle cx="250" cy="115" r="14" fill="#ef4444"/>
+                <circle cx="250" cy="115" r="6" fill="#ffffff"/>
+                <!-- Labels -->
+                <text x="210" y="235" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#64748b">Metro Boulevard</text>
+                <text x="170" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#64748b">Evergreen Avenue</text>
+              </svg>
+              <div class="position-absolute bottom-0 start-0 m-2 p-2 bg-white rounded-3 shadow-sm border small">
+                <i class="bi bi-geo-alt-fill text-danger me-1"></i> AuraSmile Orthodontics (Suite 400)
+              </div>
+            </div>
+
+            <!-- Transit & Accessibility Info -->
+            <div class="bg-light p-3 rounded-3 border small">
+              <div class="fw-bold text-dark mb-1"><i class="bi bi-train-front me-1 text-primary"></i>Transit & Parking Directions:</div>
+              <ul class="list-unstyled mb-0 text-muted">
+                <li class="mb-1">• <strong>Metro:</strong> Blue Line - Exit at Evergreen Medical Station (2 min walk).</li>
+                <li class="mb-1">• <strong>Bus:</strong> Routes 14, 22, and 88 stop directly in front of the plaza.</li>
+                <li>• <strong>Parking:</strong> Underground visitor parking garage located on Evergreen Ave. Tickets validated in suite 400.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="clinic-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="d-inline-block text-decoration-none" title="Return to AuraSmile Home">
+              <div class="brand-icon mb-3">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <span class="brand-name fs-4">Aura<span>Smile</span></span>
+            </a>
+            <p class="footer-desc">
+              Premier orthodontic and braces clinic dedicated to transforming smiles and improving dentofacial harmony with compassionate care and digital accuracy.
+            </p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Facebook Login" title="Facebook Login"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram Login" title="Instagram Login"><i class="bi bi-instagram"></i></a>
+              <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube Login" title="YouTube Login"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Login" title="LinkedIn Login"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">Orthodontic Care</h5>
+          <ul class="footer-links">
+            <li><a href="treatments.html#metal-braces">Traditional Metal Braces</a></li>
+            <li><a href="treatments.html#ceramic-braces">Ceramic / Clear Braces</a></li>
+            <li><a href="treatments.html#clear-aligners">Custom Clear Aligners</a></li>
+            <li><a href="treatments.html#lingual-braces">Lingual (Hidden) Braces</a></li>
+            <li><a href="treatments.html#retainers-care">Retainers & Retention</a></li>
+            <li><a href="treatments.html#bite-alignment">Bite Alignment & Overbites</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="footer-heading">Clinic Contact</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>742 Evergreen Medical Plaza, Suite 400, Metro City, ST 90210</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>+1 (555) 382-SMILE / +1 (555) 382-7645</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>hello@aurasmileclinic.demo</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>Mon - Fri: 8am - 6pm | Sat: 9am - 3pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>© 2026 AuraSmile Orthodontic & Braces Clinic. All rights reserved.</div>
+        <div class="footer-disclaimer-note text-md-end mt-2 mt-md-0">
+          <strong>Demo Notice:</strong> This website is a frontend demonstration created with HTML5, CSS3, JS & Bootstrap 5.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/appointments.js"></script>
+  <script>
+    function handleContactFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+
+      showToast(`Thank you, ${name}! Your enquiry regarding "${subject}" has been received. Our clinical coordinator will reply to ${email} shortly.`, 'success', 'Enquiry Sent');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>

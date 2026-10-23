@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | AuraSmile Orthodontics & Braces Clinic</title>
+  <meta name="description" content="Register for AuraSmile Orthodontic Clinic. Join our digital patient portal to track clear aligner progress, dental appointments, and treatment plans.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Clinic Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .auth-page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at 50% 10%, rgba(2, 132, 199, 0.08) 0%, #f8fafc 100%);
+    }
+
+    .auth-card {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .auth-card-header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      padding: 1.5rem 1.75rem 1.25rem;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .auth-icon-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      color: #ffffff;
+      margin-bottom: 0.65rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+
+    .form-control, .input-group-text {
+      padding: 0.65rem 0.95rem;
+      font-size: 0.925rem;
+    }
+
+    .input-group-text {
+      background-color: #f8fafc;
+      border-color: var(--border-color);
+      color: #64748b;
+    }
+
+    .form-label {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.35rem;
+    }
+
+    .btn-password-toggle {
+      border-color: var(--border-color);
+      color: #64748b;
+      background-color: #f8fafc;
+      transition: all 0.2s ease;
+    }
+
+    .btn-password-toggle:hover {
+      background-color: #e2e8f0;
+      color: var(--primary-color);
+      border-color: var(--border-color);
+    }
+
+    .form-control.is-invalid ~ .btn-password-toggle {
+      border-color: #dc3545;
+    }
+
+    .demo-disclaimer {
+      font-size: 0.785rem;
+      background-color: #f0fdf4;
+      border: 1px dashed #86efac;
+      border-radius: var(--radius-sm);
+      color: #166534;
+      padding: 0.6rem 0.85rem;
+    }
+  </style>
+</head>
+<body class="auth-page-wrapper">
+
+  <!-- Top Simple Clinic Navigation Bar -->
+  <nav class="navbar navbar-expand navbar-light bg-white border-bottom py-2 sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 py-0" href="index.html">
+        <div class="brand-icon" style="width: 34px; height: 34px; font-size: 1.1rem; border-radius: 10px;">
+          <i class="bi bi-emoji-smile-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name fs-5 fw-bold">Aura<span>Smile</span></span>
+        </div>
+      </a>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a href="index.html" class="btn btn-sm btn-outline-secondary py-1 px-3 d-flex align-items-center gap-1">
+          <i class="bi bi-house-door"></i>
+          <span>Home</span>
+        </a>
+        <a href="login.html" class="btn btn-sm btn-outline-primary py-1 px-3 d-flex align-items-center gap-1">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration Main Content Section -->
+  <main class="container my-auto py-4">
+    <div class="auth-card">
+      
+      <!-- Card Header -->
+      <div class="auth-card-header">
+        <div class="auth-icon-badge">
+          <i class="bi bi-person-plus-fill"></i>
+        </div>
+        <h1 class="h4 fw-bold mb-1 text-white">Create an Account</h1>
+        <p class="mb-0 text-white-50 small">Join AuraSmile Orthodontics & Braces Clinic</p>
+      </div>
+
+      <!-- Card Body -->
+      <div class="auth-card-body">
+
+        <!-- Top Dynamic Status Alert (Error / Success) -->
+        <div id="formAlert" class="alert d-none py-2 px-3 small align-items-start gap-2 mb-3" role="alert">
+          <i id="formAlertIcon" class="bi mt-1 flex-shrink-0"></i>
+          <div id="formAlertMsg"></div>
+        </div>
+
+        <!-- Simulated Frontend Demo Disclaimer -->
+        <div class="demo-disclaimer d-flex align-items-start gap-2 mb-3">
+          <i class="bi bi-shield-check text-success fs-6 mt-0 flex-shrink-0"></i>
+          <div>
+            <strong>Frontend Demo Mode:</strong> Account registration is simulated locally in your browser. Passwords and personal data are not transmitted to or stored on an external server.
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <form id="registerForm" novalidate onsubmit="handleRegistrationSubmit(event)">
+          
+          <!-- 1. Full Name -->
+          <div class="mb-3">
+            <label class="form-label" for="fullName">Full Name <span class="text-danger">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input type="text" class="form-control" id="fullName" name="fullName" placeholder="e.g. Sarah Jenkins" autocomplete="name" required>
+              <div class="invalid-feedback" id="fullNameFeedback">Please enter your full name.</div>
+            </div>
+          </div>
+
+          <!-- 2. Email Address -->
+          <div class="mb-3">
+            <label class="form-label" for="email">Email Address <span class="text-danger">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+              <div class="invalid-feedback" id="emailFeedback">Please enter a valid email address.</div>
+            </div>
+          </div>
+
+          <!-- 3. Phone Number -->
+          <div class="mb-3">
+            <label class="form-label" for="phone">Phone Number <span class="text-danger">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="e.g. (555) 234-5678" autocomplete="tel" required>
+              <div class="invalid-feedback" id="phoneFeedback">Please enter a valid phone number (at least 10 digits).</div>
+            </div>
+          </div>
+
+          <!-- 4. Password -->
+          <div class="mb-3">
+            <label class="form-label" for="password">Password <span class="text-danger">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-lock"></i></span>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Create password (min. 6 characters)" minlength="6" autocomplete="new-password" required>
+              <button type="button" class="btn btn-password-toggle" id="togglePasswordBtn" aria-label="Toggle password visibility">
+                <i class="bi bi-eye" id="togglePasswordIcon"></i>
+              </button>
+              <div class="invalid-feedback" id="passwordFeedback">Password must be at least 6 characters.</div>
+            </div>
+          </div>
+
+          <!-- 5. Confirm Password -->
+          <div class="mb-3">
+            <label class="form-label" for="confirmPassword">Confirm Password <span class="text-danger">*</span></label>
+            <div class="input-group has-validation">
+              <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" minlength="6" autocomplete="new-password" required>
+              <button type="button" class="btn btn-password-toggle" id="toggleConfirmPasswordBtn" aria-label="Toggle confirm password visibility">
+                <i class="bi bi-eye" id="toggleConfirmPasswordIcon"></i>
+              </button>
+              <div class="invalid-feedback" id="confirmPasswordFeedback">Passwords do not match.</div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="btnCreateAccount" class="btn btn-primary w-100 py-2 fw-semibold mt-2">
+            <i class="bi bi-person-check me-1"></i> Create Account
+          </button>
+        </form>
+
+        <!-- "Already have an account? Login" Link -->
+        <div class="text-center pt-3 mt-3 border-top">
+          <span class="text-muted small">Already have an account?</span>
+          <a href="login.html" class="fw-bold text-primary small ms-1 text-decoration-none">Login</a>
+        </div>
+
+        <!-- Return to Home Page Link -->
+        <div class="text-center mt-2">
+          <a href="index.html" class="text-muted small text-decoration-none d-inline-flex align-items-center gap-1">
+            <i class="bi bi-arrow-left"></i> Return to Home
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Credits -->
+  <footer class="py-3 text-center text-muted small border-top bg-white mt-auto">
+    <div class="container">
+      &copy; <span id="currentYear">2026</span> AuraSmile Orthodontic & Braces Clinic. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Show/Hide Password for Password Field
+      const passInput = document.getElementById('password');
+      const passBtn = document.getElementById('togglePasswordBtn');
+      const passIcon = document.getElementById('togglePasswordIcon');
+      if (passBtn && passInput) {
+        passBtn.addEventListener('click', () => {
+          const isPassword = passInput.getAttribute('type') === 'password';
+          passInput.setAttribute('type', isPassword ? 'text' : 'password');
+          passIcon.className = isPassword ? 'bi bi-eye-slash' : 'bi bi-eye';
+          passBtn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+        });
+      }
+
+      // Show/Hide Password for Confirm Password Field
+      const confirmInput = document.getElementById('confirmPassword');
+      const confirmBtn = document.getElementById('toggleConfirmPasswordBtn');
+      const confirmIcon = document.getElementById('toggleConfirmPasswordIcon');
+      if (confirmBtn && confirmInput) {
+        confirmBtn.addEventListener('click', () => {
+          const isPassword = confirmInput.getAttribute('type') === 'password';
+          confirmInput.setAttribute('type', isPassword ? 'text' : 'password');
+          confirmIcon.className = isPassword ? 'bi bi-eye-slash' : 'bi bi-eye';
+          confirmBtn.setAttribute('aria-label', isPassword ? 'Hide confirm password' : 'Show confirm password');
+        });
+      }
+
+      // Clear field validation state on user input
+      ['fullName', 'email', 'phone', 'password', 'confirmPassword'].forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+          input.addEventListener('input', () => {
+            input.classList.remove('is-invalid');
+            hideAlert();
+          });
+        }
+      });
+    });
+
+    // Display Alert Helper
+    function showAlert(message, type = 'danger') {
+      const alertEl = document.getElementById('formAlert');
+      const msgEl = document.getElementById('formAlertMsg');
+      const iconEl = document.getElementById('formAlertIcon');
+      if (!alertEl || !msgEl || !iconEl) return;
+
+      alertEl.className = `alert alert-${type} py-2 px-3 small d-flex align-items-start gap-2 mb-3`;
+      msgEl.innerHTML = message;
+
+      if (type === 'danger') {
+        iconEl.className = 'bi bi-exclamation-triangle-fill text-danger mt-1 flex-shrink-0';
+      } else if (type === 'success') {
+        iconEl.className = 'bi bi-check-circle-fill text-success mt-1 flex-shrink-0';
+      } else {
+        iconEl.className = 'bi bi-info-circle-fill text-primary mt-1 flex-shrink-0';
+      }
+
+      alertEl.classList.remove('d-none');
+    }
+
+    // Hide Alert Helper
+    function hideAlert() {
+      const alertEl = document.getElementById('formAlert');
+      if (alertEl) {
+        alertEl.classList.add('d-none');
+      }
+    }
+
+    // Email format validation helper (RFC 5322 standard check)
+    function isValidEmail(email) {
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+      return emailRegex.test(email);
+    }
+
+    // Phone number format validation helper (checks for min 10 numerical digits)
+    function isValidPhone(phone) {
+      const digits = phone.replace(/\D/g, '');
+      return digits.length >= 10 && digits.length <= 15;
+    }
+
+    // Registration Form Handler
+    function handleRegistrationSubmit(e) {
+      e.preventDefault();
+      hideAlert();
+
+      const fullNameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+      const submitBtn = document.getElementById('btnCreateAccount');
+
+      const fullName = fullNameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const password = passwordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+
+      let hasError = false;
+      let firstErrorEl = null;
+
+      // 1. Validate Full Name
+      if (!fullName) {
+        fullNameInput.classList.add('is-invalid');
+        document.getElementById('fullNameFeedback').textContent = 'Please enter your full name.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = fullNameInput;
+      } else if (fullName.length < 2) {
+        fullNameInput.classList.add('is-invalid');
+        document.getElementById('fullNameFeedback').textContent = 'Full name must contain at least 2 characters.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = fullNameInput;
+      } else {
+        fullNameInput.classList.remove('is-invalid');
+        fullNameInput.classList.add('is-valid');
+      }
+
+      // 2. Validate Email Address
+      if (!email) {
+        emailInput.classList.add('is-invalid');
+        document.getElementById('emailFeedback').textContent = 'Please enter your email address.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = emailInput;
+      } else if (!isValidEmail(email)) {
+        emailInput.classList.add('is-invalid');
+        document.getElementById('emailFeedback').textContent = 'Please enter a valid email address (e.g. name@example.com).';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = emailInput;
+      } else {
+        emailInput.classList.remove('is-invalid');
+        emailInput.classList.add('is-valid');
+      }
+
+      // 3. Validate Phone Number
+      if (!phone) {
+        phoneInput.classList.add('is-invalid');
+        document.getElementById('phoneFeedback').textContent = 'Please enter your phone number.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = phoneInput;
+      } else if (!isValidPhone(phone)) {
+        phoneInput.classList.add('is-invalid');
+        document.getElementById('phoneFeedback').textContent = 'Please enter a valid phone number (at least 10 digits).';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = phoneInput;
+      } else {
+        phoneInput.classList.remove('is-invalid');
+        phoneInput.classList.add('is-valid');
+      }
+
+      // 4. Validate Password
+      if (!password) {
+        passwordInput.classList.add('is-invalid');
+        document.getElementById('passwordFeedback').textContent = 'Please enter a password.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = passwordInput;
+      } else if (password.length < 6) {
+        passwordInput.classList.add('is-invalid');
+        document.getElementById('passwordFeedback').textContent = 'Password must be at least 6 characters long.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = passwordInput;
+      } else {
+        passwordInput.classList.remove('is-invalid');
+        passwordInput.classList.add('is-valid');
+      }
+
+      // 5. Validate Confirm Password
+      if (!confirmPassword) {
+        confirmPasswordInput.classList.add('is-invalid');
+        document.getElementById('confirmPasswordFeedback').textContent = 'Please confirm your password.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = confirmPasswordInput;
+      } else if (confirmPassword !== password) {
+        confirmPasswordInput.classList.add('is-invalid');
+        document.getElementById('confirmPasswordFeedback').textContent = 'Passwords do not match. Please ensure both passwords are identical.';
+        hasError = true;
+        if (!firstErrorEl) firstErrorEl = confirmPasswordInput;
+      } else {
+        confirmPasswordInput.classList.remove('is-invalid');
+        confirmPasswordInput.classList.add('is-valid');
+      }
+
+      // If validation fails
+      if (hasError) {
+        showAlert('<strong>Please fix the errors below</strong> and try submitting the form again.', 'danger');
+        if (firstErrorEl) {
+          firstErrorEl.focus();
+        }
+        return;
+      }
+
+      // Frontend Demo: Check if email already registered in LocalStorage demo users
+      try {
+        const users = JSON.parse(localStorage.getItem(STORAGE_KEYS.USERS) || '[]');
+        const cleanEmail = email.toLowerCase();
+        const existingUser = users.find(u => u.email.toLowerCase() === cleanEmail);
+
+        if (existingUser && !existingUser.isDemoRegistration) {
+          emailInput.classList.add('is-invalid');
+          document.getElementById('emailFeedback').textContent = 'An account with this email address already exists. Please log in.';
+          showAlert('An account with this email address already exists. <a href="login.html" class="alert-link">Click here to Login</a>.', 'danger');
+          emailInput.focus();
+          return;
+        }
+
+        // Demo Security Notice: Do not store raw passwords in LocalStorage.
+        // Save demo profile without raw credentials for preview
+        const newDemoPatient = {
+          id: 'user-patient-' + Date.now(),
+          name: fullName,
+          email: cleanEmail,
+          role: 'patient',
+          phone: phone,
+          registeredAt: new Date().toISOString().split('T')[0],
+          isDemoRegistration: true,
+          treatment: {
+            type: 'Custom Clear Aligners (Invisalign)',
+            doctorId: 'doc-2',
+            doctorName: 'Dr. Marcus Vance',
+            startDate: new Date().toISOString().split('T')[0],
+            targetDate: new Date(Date.now() + 365*24*60*60*1000).toISOString().split('T')[0],
+            currentStageNumber: 1,
+            totalStages: 5,
+            stageTitle: 'Phase 1: Initial Digital Diagnostic & Alignment',
+            currentTray: 1,
+            totalTrays: 20,
+            wearHoursGoal: 22,
+            complianceScore: '100%',
+            progressPercent: 5,
+            nextAdjustmentDate: new Date(Date.now() + 14*24*60*60*1000).toISOString().split('T')[0],
+            notes: [
+              {
+                id: 'note-welcome',
+                date: new Date().toISOString().split('T')[0],
+                doctor: 'Dr. Marcus Vance',
+                text: 'Welcome to AuraSmile! Your initial digital orthodontic model has been created.'
+              }
+            ],
+            photos: {
+              before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=80",
+              current: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80",
+              projected: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+            }
+          },
+          financials: {
+            totalCost: 3800,
+            amountPaid: 800,
+            remainingBalance: 3000,
+            installments: [
+              { id: "INST-NEW-1", date: new Date().toISOString().split('T')[0], amount: 800, label: "Initial Down Payment", status: "Paid", method: "Credit Card", receiptId: "RCPT-" + Math.floor(1000 + Math.random()*9000) },
+              { id: "INST-NEW-2", date: new Date(Date.now() + 30*24*60*60*1000).toISOString().split('T')[0], amount: 500, label: "Installment #1", status: "Pending", method: "Pending", receiptId: null }
+            ]
+          }
+        };
+
+        const existingIdx = users.findIndex(u => u.email.toLowerCase() === cleanEmail);
+        if (existingIdx >= 0) {
+          users[existingIdx] = newDemoPatient;
+        } else {
+          users.push(newDemoPatient);
+        }
+        localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+      } catch (err) {
+        console.warn("Storage warning in demo registration:", err);
+      }
+
+      // Success State Display
+      showAlert('<strong>Demo Registration Successful!</strong> Welcome to AuraSmile, ' + escapeHtml(fullName) + '. Redirecting to login...', 'success');
+      
+      // Update button state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Creating Account...';
+
+      // Show toast if available
+      if (typeof showToast === 'function') {
+        showToast('Demo registration completed successfully! Redirecting to login...', 'success', 'Account Created');
+      }
+
+      // Redirect to login after 1.5 seconds
+      setTimeout(() => {
+        window.location.href = `login.html?registered=true&email=${encodeURIComponent(email)}`;
+      }, 1500);
+    }
+
+    // Simple HTML escaping helper for safe alert text
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
