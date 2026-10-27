@@ -54,7 +54,7 @@ const INITIAL_DOCTORS = [
     bio: "Specializing in children and pre-teens, Dr. Rostova focuses on airway-friendly orthodontics and gentle habit-breaking appliances.",
     days: "Mon, Tue, Thu",
     hours: "9:00 AM - 5:30 PM",
-    image: "https://images.unsplash.com/photo-1594824813637-b2f76856a297?auto=format&fit=crop&w=700&q=80",
+    image: "https://images.unsplash.com/photo-1623854767648-e7bb8009f0db?auto=format&fit=crop&w=700&q=80",
     rating: 4.88,
     reviewsCount: 265,
     skills: ["Phase 1 Orthodontics", "Palatal Expansion", "Gentle Pediatric Care"]
@@ -69,7 +69,7 @@ const INITIAL_DOCTORS = [
     bio: "Dr. Chen utilizes low-friction passive self-ligating brackets and high-tech nickel-titanium wires to shorten treatment time and optimize comfort.",
     days: "Wed, Fri, Sat",
     hours: "10:00 AM - 6:30 PM",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=80",
+    image: "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=700&q=80",
     rating: 4.92,
     reviewsCount: 198,
     skills: ["Ceramic Braces", "Accelerated Mechanics", "Lingual Retainers"]
@@ -360,8 +360,27 @@ const INITIAL_APPOINTMENTS = [
 
 // Initialize Storage Seeds
 function initLocalStorageSeeds() {
-  if (!localStorage.getItem(STORAGE_KEYS.DOCTORS)) {
+  const doctorsJson = localStorage.getItem(STORAGE_KEYS.DOCTORS);
+  if (!doctorsJson) {
     localStorage.setItem(STORAGE_KEYS.DOCTORS, JSON.stringify(INITIAL_DOCTORS));
+  } else {
+    try {
+      const storedDoctors = JSON.parse(doctorsJson);
+      let updated = false;
+      storedDoctors.forEach(d => {
+        if (d.id === 'doc-3' && (d.image.includes('photo-1594824813637-b2f76856a297') || d.image.includes('photo-1629909613654-28e377c37b09') || !d.image)) {
+          d.image = 'https://images.unsplash.com/photo-1623854767648-e7bb8009f0db?auto=format&fit=crop&w=700&q=80';
+          updated = true;
+        }
+        if (d.id === 'doc-4' && (d.image.includes('photo-1629909613654-28e377c37b09') || !d.image)) {
+          d.image = 'https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=700&q=80';
+          updated = true;
+        }
+      });
+      if (updated) {
+        localStorage.setItem(STORAGE_KEYS.DOCTORS, JSON.stringify(storedDoctors));
+      }
+    } catch(e) {}
   }
   if (!localStorage.getItem(STORAGE_KEYS.TREATMENTS)) {
     localStorage.setItem(STORAGE_KEYS.TREATMENTS, JSON.stringify(INITIAL_TREATMENTS));
